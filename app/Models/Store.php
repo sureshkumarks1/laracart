@@ -6,5 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Store extends Model
 {
-    
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
+
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
+
 }
